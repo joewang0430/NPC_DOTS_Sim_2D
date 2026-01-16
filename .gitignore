@@ -1,0 +1,43 @@
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Pp]rofilerCaptures
+
+
+# Unity 场景依赖缓存（可再生，避免提交噪音）
+Assets/SceneDependencyCache/
+Assets/SceneDependencyCache.meta
+.vs/
+.gradle/
+*.csproj
+*.unityproj
+*.sln
+*.slnx
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.VC.db
+*.DS_Store
+*.vscode
+
+
+# 额外的 IDE / OS 垃圾
+.idea/
+*.swp
+*.orig
+
+
+# Unity 崩溃/构建产生的杂项（按需）
+crashlytics-build.properties
+sysinfo.txt
