@@ -21,11 +21,11 @@ public class TextureArrayWizard : ScriptableWizard
         // 获取第一张图的属性作为基准
         Texture2D t0 = textures[0];
         // 创建 Texture2DArray
-        // 参数：宽, 高, 切片数量(图的数量), 格式, 是否有Mipmap
+        // 参数：宽, 高, 切片数量(图的数量), 格式, 是否有Mipmap (改为 false 以解决拉远变白问题)
         Texture2DArray textureArray = new Texture2DArray(
-            t0.width, t0.height, textures.Length, t0.format, t0.mipmapCount > 1);
+            t0.width, t0.height, textures.Length, t0.format, false); // false = 关闭 mipmap
 
-        // 应用过滤模式（通常像素风选 Point，平滑选 Bilinear）
+        // 应用过滤模式（强制 Point 以获得清晰的像素风）
         textureArray.filterMode = FilterMode.Point;
         textureArray.wrapMode = TextureWrapMode.Clamp;
 
